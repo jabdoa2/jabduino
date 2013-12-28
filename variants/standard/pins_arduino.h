@@ -112,6 +112,23 @@ static const uint8_t A7 = 24;
 #define NUM_ANALOG_INPUTS           8
 #define analogInputToDigitalPin(p)  ((p < 7) ? (p) + 24 : -1)
 
+// Copy and paste from for ATM: http://code.google.com/p/sanguino/issues/detail?id=15
+#define digitalPinToPCICR(p)    (((p) >= 0 && (p) <= 31) ? (&PCICR) : ((uint8_t *)0))
+#define digitalPinToPCICRbit(p) (((p) <= 7) ? 1 : (((p) <= 15) ? 3 : (((p) <= 23) ? 2 : (((p) <= 31) ? 3 : 0))))
+#define digitalPinToPCMSK(p)    ( \
+								(	((p) <=  7) ? (&PCMSK1) : \
+								(	((p) <= 15) ? (&PCMSK3) : \
+								(	((p) <= 23) ? (&PCMSK2) : \
+								(	((p) <= 31) ? (&PCMSK0) : \
+									((uint8_t *)0) \
+								)))))
+#define digitalPinToPCMSKbit(p) ( \
+								(	((p) <=  7) ? (p) : \
+								(	((p) <= 15) ? ((p) - 8) : \
+								(	((p) <= 23) ? ((p) - 16) : \
+								(	((p) <= 31) ? ((p) - 24) : \
+								0 )))))
+
 #define digitalPinHasPWM(p)         ((p) == 3 || (p) == 4 || (p) == 12 || (p) == 13 || (p) == 14 || (p) == 15 )
 
 #define PA 1
