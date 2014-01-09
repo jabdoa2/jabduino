@@ -6,7 +6,7 @@ atmega644a.upload.protocol=stk500
 atmega644a.upload.maximum_size=63488
 atmega644a.upload.speed=57600
 
-atmega644a.build.mcu=atmega644
+atmega644a.build.mcu=atmega644a
 atmega644a.build.f_cpu=8000000L
 atmega644a.build.core=arduino
 atmega644a.build.variant=standard
