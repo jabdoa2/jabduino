@@ -32,28 +32,6 @@
 
 #include <avr/pgmspace.h>
 
-#define NOT_A_PIN 0
-#define NOT_A_PORT 0
-
-#define NOT_ON_TIMER 0
-#define TIMER0A 1
-#define TIMER0B 2
-#define TIMER1A 3
-#define TIMER1B 4
-#define TIMER2  5
-#define TIMER2A 6
-#define TIMER2B 7
-
-#define TIMER3A 8
-#define TIMER3B 9
-#define TIMER3C 10
-#define TIMER4A 11
-#define TIMER4B 12
-#define TIMER4C 13
-#define TIMER5A 14
-#define TIMER5B 15
-#define TIMER5C 16
-
 const static uint8_t SS   = 4;
 const static uint8_t MOSI = 5;
 const static uint8_t MISO = 6;
@@ -130,18 +108,6 @@ static const uint8_t A7 = 24;
 								0 )))))
 
 #define digitalPinHasPWM(p)         ((p) == 3 || (p) == 4 || (p) == 12 || (p) == 13 || (p) == 14 || (p) == 15 )
-
-#define PA 1
-#define PB 2
-#define PC 3
-#define PD 4
-#define PE 5
-#define PF 6
-#define PG 7
-#define PH 8
-#define PJ 10
-#define PK 11
-#define PL 12
 
 #ifdef ARDUINO_MAIN
 // these arrays map port names (e.g. port B) to the
