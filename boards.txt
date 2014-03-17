@@ -11,3 +11,14 @@ atmega644a.build.f_cpu=8000000L
 atmega644a.build.core=arduino
 atmega644a.build.variant=standard
 
+atmega644.name=Jabduino ATmega644
+
+atmega644.upload.protocol=stk500
+atmega644.upload.maximum_size=63488
+atmega644.upload.speed=57600
+
+atmega644.build.mcu=atmega644
+atmega644.build.f_cpu=8000000L
+atmega644.build.core=arduino
+atmega644.build.variant=standard
+
